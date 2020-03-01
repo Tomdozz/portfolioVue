@@ -1,0 +1,28 @@
+* {
+  margin: 0 !important;
+//   --txt-color: #0c0c0c;
+	--txt-color: #ff0000;
+	--h1-text-color: #131313;
+	--h4-text-color: #303030;
+
+  /* --menuitem-bg-color: #707070; */
+  --menuitem-bg-color: rgba(128, 128, 128, 0.171);
+  --menuitem-bg-color-hover: rgba(128, 128, 128, 0.705);
+  --icn-color: #707070;
+  --topnav-height: 10vh;
+  --font-fam: Helvetica;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+.center{
+	position: fixed;
+	width: inherit;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  }

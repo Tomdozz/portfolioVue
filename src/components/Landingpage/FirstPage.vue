@@ -1,0 +1,74 @@
+<template>
+  <div class="firstpage">
+    <FullScreenBackground/>
+    <Navigation />
+    <!-- <div class="circle center"></div> -->
+    <div class="center">
+      <div class="title">
+        <h1>Tom Andersson</h1>
+        <h4>Developer - Photographer - Videographer</h4>
+      </div>
+      
+    </div>
+      <!-- <img src="../../assets/netset-59.jpg" alt="backdrop" /> -->
+  </div>
+</template>
+
+<script>
+import Navigation from "@/components/Landingpage/Navigation.vue";
+import FullScreenBackground from "@/components/Landingpage/FullScreenBackground.vue"
+
+export default {
+  name: "FirstPage",
+  components: {
+    Navigation,
+    FullScreenBackground
+  }
+};
+</script>
+
+<style scoped lang="scss">
+@import '../../assets/global.scss';
+
+h1 {
+  text-transform: uppercase;
+  color: var(--h1-text-color);
+}
+h4 {
+  text-transform: uppercase;
+  color: var(--h4-text-color);
+}
+
+.title:before{
+  bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: -50%;
+    background: black;
+    width: 100%;
+}
+.title:after{
+  bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 150%;
+    background: black;
+    width: 100%;
+}
+
+// .circle {
+//     background-color:rgba(255, 255, 255, 0);
+//     border:1px solid rgb(0, 0, 0);    
+//     height:300px;
+//     border-radius:100%;
+//     -moz-border-radius:50%;
+//     -webkit-border-radius:50%;
+//     width:420px;
+//     	// transform: translate(-50%, -10%);
+// }
+
+</style>

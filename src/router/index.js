@@ -1,14 +1,27 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+// import Home from "../views/Home.vue";
+import FirstPage from "../components/Landingpage/FirstPage";
+import LoginRegister from "../components/LoginRegister";
+import Who from "../components/Who";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home
+    name: "FirstPage",
+    component: FirstPage
+  },
+  {
+     path: '/login',
+     name: 'login',
+     component: LoginRegister,
+  },
+  {
+    path: '/who',
+    name: 'who',
+    component: Who,
   },
   {
     path: "/about",
