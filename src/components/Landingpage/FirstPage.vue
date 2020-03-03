@@ -1,22 +1,16 @@
 <template>
   <div class="firstpage">
-    <FullScreenBackground/>
+    <FullScreenBackground />
     <Navigation />
     <!-- <div class="circle center"></div> -->
-    <div class="center">
-      <div class="title">
-        <h1>Tom Andersson</h1>
-        <h4>Developer - Photographer - Videographer</h4>
-      </div>
-      
-    </div>
-      <!-- <img src="../../assets/netset-59.jpg" alt="backdrop" /> -->
+    <div class="center"></div>
+    <!-- <img src="../../assets/netset-59.jpg" alt="backdrop" /> -->
   </div>
 </template>
 
 <script>
 import Navigation from "@/components/Landingpage/Navigation.vue";
-import FullScreenBackground from "@/components/Landingpage/FullScreenBackground.vue"
+import FullScreenBackground from "@/components/Landingpage/FullScreenBackground.vue";
 
 export default {
   name: "FirstPage",
@@ -28,7 +22,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/global.scss';
+@import "../../assets/global.scss";
 
 h1 {
   text-transform: uppercase;
@@ -39,30 +33,30 @@ h4 {
   color: var(--h4-text-color);
 }
 
-.title:before{
+.title:before {
   bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    position: absolute;
-    top: -50%;
-    background: black;
-    width: 100%;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: -50%;
+  background: black;
+  width: 100%;
 }
-.title:after{
+.title:after {
   bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    position: absolute;
-    top: 150%;
-    background: black;
-    width: 100%;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  top: 150%;
+  background: black;
+  width: 100%;
 }
 
 // .circle {
 //     background-color:rgba(255, 255, 255, 0);
-//     border:1px solid rgb(0, 0, 0);    
+//     border:1px solid rgb(0, 0, 0);
 //     height:300px;
 //     border-radius:100%;
 //     -moz-border-radius:50%;
@@ -70,5 +64,4 @@ h4 {
 //     width:420px;
 //     	// transform: translate(-50%, -10%);
 // }
-
 </style>

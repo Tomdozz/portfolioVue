@@ -1,91 +1,55 @@
 <template>
   <div id="navbar">
-    <div id="home" @click="home">
+    <!-- <div id="home" @click="home">
       <span>LifeArray</span>
-    </div>
-    <!-- <div
-      id="burger"
-      :class="{ active: isBurgerActive }"
-      @click.prevent="toggle"
-    >
-      <slot>
-        <button type="button" class="burger-button" title="Menu">
-          <span class="burger-bar burger-bar--1"></span>
-          <span class="burger-bar burger-bar--2"></span>
-          <span class="burger-bar burger-bar--3"></span>
-        </button>
-      </slot>
-      <transition name="fade">
-        <div v-if="isBurgerActive" id="dropdownlist">
-          <div class="menu_connector"></div>
-          <ul>
-            <li v-for="item in items" :key="item.name">
-              <router-link class="menuEntry" :to="{ name: item.redirectTo }">{{
-                item.title
-              }}</router-link>
-            </li>
-          </ul>
-        </div>
-      </transition>
     </div> -->
     <div class="headerMenu">
-        <ul>
-          <li v-for="headlineItem in headlineItems" :key="headlineItem.name">
-            <router-link class="menuEntry" :to="{name: headlineItem.redirectTo}">{{
-                headlineItem.title
-              }}</router-link>
-          </li>
-        </ul>
-      </div>
+      <ul>
+        <li v-for="headlineItem in headlineItems" :key="headlineItem.name">
+          <router-link
+            :class="headlineItem.class"
+            :to="{ name: headlineItem.redirectTo }"
+            >{{ headlineItem.title }}
+            <h6 class="subTitle">{{ headlineItem.subTitle }}</h6>
+          </router-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   computed: {
-    items() {
+    headlineItems() {
       return [
         {
-          title: "Login",
-          redirectTo: "login",
-          additionalinformation: ""
+          title: "Who",
+          redirectTo: "who",
+          class: "menuEntry"
         },
         {
-          title: "About",
+          title: "What",
           redirectTo: "login",
-          additionalinformation: ""
+          class: "menuEntry"
         },
         {
-          title: "Sign up",
-          redirectTo: "login",
-          additionalinformation: ""
+          title: "Tom Andersson",
+          redirectTo: "firstPage",
+          class: "menuEntry home",
+          subTitle: "Developer Photographer Videographer"
         },
         {
-          title: "Sign in",
+          title: "Work",
           redirectTo: "login",
-          additionalinformatio: ""
+          class: "menuEntry"
+        },
+        {
+          title: "Contact",
+          redirectTo: "login",
+          class: "menuEntry"
         }
       ];
-    },
-    headlineItems(){
-        return [
-            {
-                title: "Who",
-                redirectTo: "who"
-            },
-            {
-                title: "What",
-                redirectTo: "login"
-            },
-            {
-                title: "Work",
-                redirectTo: "login"
-            },
-             {
-                title: "New title",
-                redirectTo: "login"
-            }
-        ]
     }
   },
   mounted() {},
@@ -106,13 +70,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '../../assets/global.scss';
+@import "../../assets/global.scss";
 
 #navbar {
   position: fixed;
- // background-color: rgba(128, 128, 128, 0.171);
+  // background-color: rgba(128, 128, 128, 0.171);
   width: 100%;
   height: var(--topnav-height);
+  padding-top: 40px;
 }
 
 #home {
@@ -155,7 +120,7 @@ li {
   transform-origin: top;
 }
 .menu_connector {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -241,10 +206,11 @@ li {
 #burger.active .burger-bar--3 {
   transform: rotate(-45deg);
 }
+
 .headerMenu {
   position: absolute;
   left: 50%;
-  width: 600px;
+  width: 1000px;
   top: 50%;
   transform: translate(-50%, -50%);
 
@@ -259,9 +225,26 @@ li {
   li {
     list-style: none;
     display: inline-block;
-    width: calc(100% / 4);
+    //width: calc(100% / 5);
     //height: 120px;
     text-align: center;
+    //padding: 15px;
+  }
+
+  .menuEntry {
+    padding: 25px;
+    width: 100px;
+  }
+  .home {
+    width: 300px;
+    height: 50px;
+  }
+  .subTitle {
+    position: absolute;
+    text-transform: uppercase;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
   a {
@@ -269,7 +252,7 @@ li {
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
-  
+
     display: inline-block;
     padding: 15px 20px;
     position: relative;
@@ -288,12 +271,12 @@ li {
     width: 0;
   }
 
-  a:hover:after { 
-    width: 100%; 
-    left: 0; 
+  a:hover:after {
+    width: 100%;
+    left: 0;
   }
 
-   a:before {
+  a:before {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -307,9 +290,9 @@ li {
     width: 0;
   }
 
-  a:hover:before { 
-    width: 100%; 
-    left: 0; 
+  a:hover:before {
+    width: 100%;
+    left: 0;
   }
 }
 </style>

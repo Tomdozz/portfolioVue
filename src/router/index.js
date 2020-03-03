@@ -10,18 +10,18 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "FirstPage",
+    name: "firstPage",
     component: FirstPage
   },
   {
-     path: '/login',
-     name: 'login',
-     component: LoginRegister,
+    path: "/login",
+    name: "login",
+    component: LoginRegister
   },
   {
-    path: '/who',
-    name: 'who',
-    component: Who,
+    path: "/who",
+    name: "who",
+    component: Who
   },
   {
     path: "/about",

@@ -1,5 +1,5 @@
 <template>
-   <div>
+  <div>
     <Navigation />
     <div class="maincontent center">
       <div class="loginform" v-if="isLogin">
@@ -86,26 +86,26 @@
 import Navigation from "@/components/Landingpage/Navigation.vue";
 
 export default {
-    name: 'LoginRegister',
-    components: {
-      Navigation
-    },
-    data() {
-      return {
-        registerEmail: '',
-        registerPassword: '',
-        loginEmail: '',
-        loginPassword: '',
-        registerFirstName: '',
-        registerLastName: '',
-        isLogin: true,
-      }
+  name: "LoginRegister",
+  components: {
+    Navigation
   },
-}
+  data() {
+    return {
+      registerEmail: "",
+      registerPassword: "",
+      loginEmail: "",
+      loginPassword: "",
+      registerFirstName: "",
+      registerLastName: "",
+      isLogin: true
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/global.scss';
+@import "../assets/global.scss";
 
 .inputs {
   padding-top: 1em;

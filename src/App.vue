@@ -5,15 +5,13 @@
       <router-link to="/about">About</router-link>
     </div> -->
     <transition name="router-anim">
-      <router-view/>
+      <router-view />
     </transition>
   </div>
 </template>
 
 <style lang="scss">
-
 @import "https://cdn.jsdelivr.net/npm/animate.css@3.5.1";
-
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -25,7 +23,7 @@
 
 .router-anim-enter-active {
   animation: coming 1s;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
   opacity: 0;
 }
 .router-anim-leave-active {
