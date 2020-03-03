@@ -30,7 +30,7 @@ export default {
         },
         {
           title: "What",
-          redirectTo: "login",
+          redirectTo: "what",
           class: "menuEntry"
         },
         {
@@ -73,7 +73,7 @@ export default {
 @import "../../assets/global.scss";
 
 #navbar {
-  position: fixed;
+  position: absolute;
   // background-color: rgba(128, 128, 128, 0.171);
   width: 100%;
   height: var(--topnav-height);

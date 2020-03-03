@@ -103,12 +103,15 @@ export default {
 <style lang="scss" scoped>
 .cb-slideshow,
 .cb-slideshow:after {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
   z-index: -100;
+  overflow: hidden;
+  margin: 0;
+  max-width: 100vw;
 }
 
 ul {

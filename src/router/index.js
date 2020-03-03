@@ -4,6 +4,7 @@ import VueRouter from "vue-router";
 import FirstPage from "../components/Landingpage/FirstPage";
 import LoginRegister from "../components/LoginRegister";
 import Who from "../components/Who";
+import What from "../components/What";
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,11 @@ const routes = [
     path: "/who",
     name: "who",
     component: Who
+  },
+  {
+    path: "/what",
+    name: "what",
+    component: What
   },
   {
     path: "/about",

@@ -1,7 +1,13 @@
 <template>
   <div class="firstpage">
-    <FullScreenBackground />
     <Navigation />
+    <section>
+      <FullScreenBackground />
+    </section>
+    <section>
+      hello
+    </section>
+
     <!-- <div class="circle center"></div> -->
     <div class="center"></div>
     <!-- <img src="../../assets/netset-59.jpg" alt="backdrop" /> -->
@@ -23,6 +29,13 @@ export default {
 
 <style scoped lang="scss">
 @import "../../assets/global.scss";
+
+section {
+  //width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+}
 
 h1 {
   text-transform: uppercase;

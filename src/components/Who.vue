@@ -6,11 +6,17 @@
         Who
       </h1>
       <hr class="titleUnderline" />
-      <!-- <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam vitae,
-        eveniet, maiores autem deleniti sapiente pariatur qui nisi fugit numquam
-        sint, porro atque alias beatae facilis ad quos molestias obcaecati.
-      </p> -->
+      <p>
+        Software developer based in Malmö.
+        <br />
+        My main interest are development of system that improves peoples
+        everyday life, education and leadership. My knowledge span from software
+        architecture all the way to front-end development. In addition to this,
+        I have experience in working with 3d-graphics and graphical design. I am
+        always interested in meeting new people and learning new things, so feel
+        free to contact me! Development: Java, C#, C++/C, JavaScript, HTML, Css,
+        SQL among others
+      </p>
     </div>
     <span class="profilePicture"> </span>
   </div>
@@ -33,6 +39,7 @@ export default {
   top: 20%;
   left: 30%;
   width: 300px;
+  text-align: left;
 
   .title {
     text-transform: uppercase;
@@ -44,7 +51,7 @@ export default {
   }
 
   .titleUnderline {
-    width: 30%;
+    width: 100%;
     border-style: inset;
   }
 }
