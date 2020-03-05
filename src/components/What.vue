@@ -29,7 +29,6 @@
 export default {
   mounted() {
     const images = document.querySelectorAll(".anim");
-
     let observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
