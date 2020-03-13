@@ -24,7 +24,7 @@
         <div class="left info section1Anim">
           <h1>I'm a web developer</h1>
           <h2>... in a designer's body</h2>
-          <p>
+          <!-- <p>
             Software developer based in Malmö. My main interests are development
             of system that improves peoples everyday life, education and
             leadership. My knowledge span from software architecture all the way
@@ -33,7 +33,7 @@
             interested in meeting new people and learning new things, so feel
             free to contact me! Development: Java, C#, C++/C, JavaScript, HTML,
             Css, SQL among others
-          </p>
+          </p> -->
         </div>
 
         <img
@@ -42,6 +42,9 @@
           class="profile right section1Anim"
         />
       </div>
+    </section>
+    <section>
+      
     </section>
   </div>
 </template>
@@ -218,7 +221,7 @@ section {
 }
 
 .info.move {
-  animation: info 2s ease-in;
+  animation: info 1.5s ease-in;
   animation-fill-mode: forwards;
 
 }
@@ -232,7 +235,7 @@ section {
   }
 }
 .profile.move {
-  animation: profile 2s ease-in;
+  animation: profile 1.5s ease-in;
   animation-fill-mode: forwards;
 
 }
