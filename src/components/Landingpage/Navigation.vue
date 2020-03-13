@@ -102,9 +102,10 @@ button:focus {
 li {
   list-style-type: none;
 }
+
 .menuEntry {
   text-decoration: none;
-  color: black;
+  color: var(--dark);
 }
 #dropdownlist {
   position: absolute;
@@ -256,6 +257,7 @@ li {
     display: inline-block;
     padding: 15px 20px;
     position: relative;
+    color: var(--dark);
   }
 
   a:after {
@@ -266,7 +268,7 @@ li {
     height: 2px;
     left: 50%;
     position: absolute;
-    background: black;
+    background: var(--dark);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
@@ -285,7 +287,7 @@ li {
     left: 50%;
     position: absolute;
     top: 5%;
-    background: black;
+    background: var(--dark);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }

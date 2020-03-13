@@ -72,11 +72,11 @@ export default {
 
 .chevron:before {
   left: 0;
-  transform: skew(0deg, 50deg);
+  transform: skew(0deg, 40deg);
 
-  border-top-left-radius: 10px;
+  border-top-left-radius: 3px;
   //border-top-right-radius: 6px;
-  border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 3px;
   //border-bottom-right-radius: 6px;
 }
 
@@ -84,10 +84,10 @@ export default {
   right: 0;
   width: 50%;
   //border-top-left-radius: 6px;
-  border-top-right-radius: 10px;
+  border-top-right-radius: 3px;
   //border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 10px;
-  transform: skew(0deg, -50deg);
+  border-bottom-right-radius: 3px;
+  transform: skew(0deg, -40deg);
 }
 
 @keyframes move {
