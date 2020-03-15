@@ -23,7 +23,7 @@
       <div class="long">
         <div class="left info section1Anim">
           <h1>I'm a web developer</h1>
-          <h2>... in a designer's body</h2>
+          <h2>...with a passion for design</h2>
           <!-- <p>
             Software developer based in Malmö. My main interests are development
             of system that improves peoples everyday life, education and
@@ -44,7 +44,15 @@
       </div>
     </section>
     <section>
-      
+      <div class="development section1Anim">
+        <h1>Development</h1>
+        <p>B.S in computer sience with specialization in game development. With passion for design and creating an software that improve peoples everyday lives </p>
+      </div>
+      <img
+        alt="keyboard"
+        src="../assets/keyboard2.png"
+        class="keyboard section1Anim"
+      />
     </section>
   </div>
 </template>
@@ -81,14 +89,15 @@ export default {
   background: var(--paper);
   //color: #738baa;
 }
-h1{
-    color: var(--dusty)
+h1 {
+  color: var(--dusty);
 }
-h2, h3{
-    color: var(--lavendar)
+h2,
+h3 {
+  color: var(--lavendar);
 }
-p{
-    color: var(--lavendar)
+p {
+  color: var(--lavendar);
 }
 .firstSection {
   height: 110wh;
@@ -220,10 +229,68 @@ section {
   }
 }
 
+.keyboard {
+  width: 50%;
+  position: relative;
+  left: -29%;
+  z-index: 10;
+  //top: -10%;
+  opacity: 0;
+}
+.development{
+  text-transform: uppercase;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  z-index: 5;
+  opacity: 0;
+  width: 40vW;
+  h1{
+    text-align: left;
+    font-size: 5em;
+
+  }
+  p{
+        text-align: left;
+  }
+}
+
+.keyboard.move {
+  animation: leftToRight 1.5s ease-in;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.development.move{
+  animation: leftToRightInfo 1.5s ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 0.99s;
+
+}
+
 .info.move {
   animation: info 1.5s ease-in;
   animation-fill-mode: forwards;
+}
 
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-80%) rotateY(-20deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes leftToRightInfo {
+  0% {
+    opacity: 0;
+    transform: translateX(-140%);
+    //rotateY(-20deg);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes info {
@@ -237,7 +304,6 @@ section {
 .profile.move {
   animation: profile 1.5s ease-in;
   animation-fill-mode: forwards;
-
 }
 
 @keyframes profile {

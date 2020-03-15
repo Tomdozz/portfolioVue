@@ -28,11 +28,11 @@ export default {
           redirectTo: "who",
           class: "menuEntry"
         },
-        {
-          title: "What",
-          redirectTo: "what",
-          class: "menuEntry"
-        },
+        // {
+        //   title: "What",
+        //   redirectTo: "what",
+        //   class: "menuEntry"
+        // },
         {
           title: "Tom Andersson",
           redirectTo: "firstPage",
@@ -44,11 +44,11 @@ export default {
           redirectTo: "login",
           class: "menuEntry"
         },
-        {
-          title: "Contact",
-          redirectTo: "login",
-          class: "menuEntry"
-        }
+        // {
+        //   title: "Contact",
+        //   redirectTo: "login",
+        //   class: "menuEntry"
+        // }
       ];
     }
   },
@@ -234,10 +234,10 @@ li {
 
   .menuEntry {
     padding: 25px;
-    width: 100px;
+    width: 250px;
   }
   .home {
-    width: 300px;
+    width: 350px;
     height: 50px;
   }
   .subTitle {
