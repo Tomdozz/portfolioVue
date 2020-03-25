@@ -1,8 +1,33 @@
 <template>
   <div id="navbar">
-    <!-- <div id="home" @click="home">
-      <span>LifeArray</span>
-    </div> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <div class="contactBtn" v-on:click="toggle">
+      <h3>Contact</h3>
+    </div>
+    <transition name="expand">
+      <div v-if="showContact" class="overlay">
+        <div class="close"  v-on:click="toggle" ></div>
+        <h4 class="contactMe">Contact me</h4>
+        <a href="mailto:hello@tomandersson.se" class="mailto">
+          hello@tomandersson.se
+        </a>
+
+        <div class="socialmedialinks">
+          <ul class="social-list">
+            <li v-for="socialItem in socialItems" :key="socialItem.name">
+              <a
+                target="_blank"
+                :class="socialItem.class"
+                :href="socialItem.redirectTo"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </transition>
     <div class="headerMenu">
       <ul>
         <li v-for="headlineItem in headlineItems" :key="headlineItem.name">
@@ -43,24 +68,44 @@ export default {
           title: "Work",
           redirectTo: "login",
           class: "menuEntry"
-        },
+        }
         // {
         //   title: "Contact",
         //   redirectTo: "login",
         //   class: "menuEntry"
         // }
       ];
+    },
+
+    socialItems() {
+      return [
+        {
+          title: "LinkedIn",
+          redirectTo: "https://www.linkedin.com/in/tom-andersson-4a7189113/",
+          class: "fa fa-linkedin"
+        },
+        {
+          title: "Instagram",
+          redirectTo: "https://www.instagram.com/lifearray/",
+          class: "fa fa-instagram"
+        },
+        {
+          title: "LinkedIn",
+          redirectTo: "https://www.linkedin.com/in/tom-andersson-4a7189113/",
+          class: "fa fa-twitter"
+        }
+      ];
     }
   },
   mounted() {},
   data() {
     return {
-      isBurgerActive: false
+      showContact: false
     };
   },
   methods: {
     toggle() {
-      this.isBurgerActive = !this.isBurgerActive;
+      this.showContact = !this.showContact;
     },
     home() {
       this.$router.push({ name: "FirstPage" });
@@ -74,10 +119,118 @@ export default {
 
 #navbar {
   position: absolute;
-  // background-color: rgba(128, 128, 128, 0.171);
-  width: 100%;
+    width: 100%;
   height: var(--topnav-height);
   padding-top: 40px;
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+  cursor: pointer;
+  animation: spin 1s linear infinite;
+  animation-play-state: paused; 
+
+}
+.close:hover {
+  opacity: 1;
+  animation-play-state: running;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: var(--dark);
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+@keyframes spin {
+  100% {transform: rotate(1turn); }
+}
+
+.contactBtn {
+  position: relative;
+  left: 90%;
+  transform: translate(-50%, 0%);
+  cursor: pointer;
+
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    color: var(--dark);
+  }
+}
+.fa {
+  text-decoration: none;
+  font-size: 30px;
+  width: 50px;
+  color: var(--dusty);
+}
+
+.fa:hover {
+  color: var(--lavendar);
+}
+
+.socialmedialinks {
+  position: fixed;
+  width: 100%;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+}
+.social-list {
+  padding: 0px;
+}
+
+.social-list li {
+  display: inline;
+}
+
+.overlay {
+  position: fixed;
+  width: 90%;
+  height: 90%;
+  background-color: var(--paper);
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .contactMe {
+    position: relative;
+    top: 40%;
+    left: 50%;
+    font-size: 20px;
+    color: var(--lavendar);
+    transform: translate(-50%, -50%);
+  }
+}
+.mailto {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 80px;
+  transform: translate(-50%, -50%);
+  color: var(--dusty);
+  text-decoration: none;
+}
+.mailto.hover {
+  color: var(--lavendar);
 }
 
 #home {
@@ -131,12 +284,22 @@ li {
   height: 55px;
   background-color: rgb(255, 255, 255);
 }
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
+.expand-enter-active{
+	animation: bounce-in 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+.expand-leave-active{
+    animation: bounce-in 0.5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    max-height: 0px; 
+    opacity: 0.4;
+  }
+  100% {
+    max-height: 100%;
+    opacity: 1;
+  }
 }
 
 #dropdownlist li {

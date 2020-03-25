@@ -46,13 +46,28 @@
     <section>
       <div class="development section1Anim">
         <h1>Development</h1>
-        <p>B.S in computer sience with specialization in game development. With passion for design and creating an software that improve peoples everyday lives </p>
+        <p>
+          B.S in computer sience with specialization in game development. With
+          passion for design and creating an software that improve peoples
+          everyday lives
+        </p>
       </div>
       <img
         alt="keyboard"
         src="../assets/keyboard2.png"
         class="keyboard section1Anim"
       />
+    </section>
+    <section>
+      <img
+        alt="camera"
+        src="../assets/camera1.png"
+        class="camera section1Anim"
+      />
+      <div class="photography section1Anim">
+        <h1>Photography & videography</h1>
+        <p>I am a lifestyle</p>
+      </div>
     </section>
   </div>
 </template>
@@ -237,21 +252,72 @@ section {
   //top: -10%;
   opacity: 0;
 }
-.development{
+.development {
   text-transform: uppercase;
   position: relative;
   top: 20%;
   left: 50%;
   z-index: 5;
   opacity: 0;
-  width: 40vW;
-  h1{
+  width: 40vw;
+  h1 {
     text-align: left;
     font-size: 5em;
-
   }
-  p{
-        text-align: left;
+  p {
+    text-align: left;
+  }
+}
+
+.camera {
+  position: relative;
+  left: 31%;
+  z-index: 5;
+  opacity: 0;
+  width: 40vw;
+  z-index: 5;
+}
+.photography {
+  text-transform: uppercase;
+
+  position: relative;
+  z-index: 5;
+  top: -50%;
+  left: 5%;
+  opacity: 0;
+  width: 40vw;
+  z-index: 5;
+
+  h1 {
+    text-align: left;
+    font-size: 5em;
+    color: var(--dark);
+    text-align: left;
+  }
+
+  p {
+    color: var(--dusty);
+    text-align: left;
+  }
+}
+
+.camera.move {
+  animation: rightToLeft 1.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.photography.move {
+  animation: leftToRight 1.5s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(80%) rotateY(-20deg);
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -260,11 +326,10 @@ section {
   animation-fill-mode: forwards;
   opacity: 0;
 }
-.development.move{
+.development.move {
   animation: leftToRightInfo 1.5s ease-in;
   animation-fill-mode: forwards;
   animation-delay: 0.99s;
-
 }
 
 .info.move {
