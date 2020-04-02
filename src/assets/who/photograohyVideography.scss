@@ -1,0 +1,61 @@
+.camera {
+    position: relative;
+    left: 31%;
+    z-index: 5;
+    opacity: 0;
+    width: 40vw;
+    z-index: 5;
+  }
+  .photography {
+    text-transform: uppercase;
+  
+    position: relative;
+    z-index: 5;
+    top: -50%;
+    left: 5%;
+    opacity: 0;
+    width: 40vw;
+    z-index: 5;
+  
+    h1 {
+      text-align: left;
+      font-size: 5em;
+      color: var(--dark);
+      text-align: left;
+    }
+  
+    p {
+      color: var(--dusty);
+      text-align: left;
+    }
+  }
+.camera.move {
+    animation: rightToLeft 1.5s ease-in;
+    animation-fill-mode: forwards;
+  }
+  
+  .photography.move {
+    animation: leftToRight 1.5s ease-in;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes rightToLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(80%) rotateY(-20deg);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes leftToRightInfo {
+    0% {
+      opacity: 0;
+      transform: translateX(-140%);
+      //rotateY(-20deg);
+    }
+    100% {
+      opacity: 1;
+    }
+  }

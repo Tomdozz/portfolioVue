@@ -1,0 +1,70 @@
+.skill-container {
+    width: 100%;
+    background-color: var(--darkPaper);
+    border-radius: 25px;
+}
+  
+  .skills {
+    text-align: right;
+    padding-top: 3px;
+    //padding-bottom: 10px;
+    color: white;
+    height: 5px;
+    border-radius: 25px;
+    opacity: 0;
+    background-color: var(--overcast);
+  }
+
+  //---Animations---
+  .skills.move.java{
+    animation: fillBarJava 1s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes fillBarJava {
+    0% {
+      opacity: 0.80;
+      width: 0%;
+    }
+    100% {
+      opacity: 1;
+      width: 85%;
+    }
+  }
+
+  .skills.move.html{
+    animation: fillBarHtml 1s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+  }
+
+  @keyframes fillBarHtml {
+    0% {
+      opacity: 0.80;
+      width: 0%;
+    }
+    100% {
+      opacity: 1;
+      width: 75%;
+    }
+  }
+
+  .skills.move.js{
+    animation: fillBarJs 1s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+  }
+
+  @keyframes fillBarJs {
+    0% {
+      opacity: 0.80;
+      width: 0%;
+    }
+    100% {
+      opacity: 1;
+      width: 65%;
+    }
+  }
+
+  

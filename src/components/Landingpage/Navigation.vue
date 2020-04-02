@@ -9,7 +9,7 @@
     </div>
     <transition name="expand">
       <div v-if="showContact" class="overlay">
-        <div class="close"  v-on:click="toggle" ></div>
+        <div class="close" v-on:click="toggle"></div>
         <h4 class="contactMe">Contact me</h4>
         <a href="mailto:hello@tomandersson.se" class="mailto">
           hello@tomandersson.se
@@ -119,7 +119,7 @@ export default {
 
 #navbar {
   position: absolute;
-    width: 100%;
+  width: 100%;
   height: var(--topnav-height);
   padding-top: 40px;
 }
@@ -133,17 +133,17 @@ export default {
   opacity: 0.3;
   cursor: pointer;
   animation: spin 1s linear infinite;
-  animation-play-state: paused; 
-
+  animation-play-state: paused;
 }
 .close:hover {
   opacity: 1;
   animation-play-state: running;
 }
-.close:before, .close:after {
+.close:before,
+.close:after {
   position: absolute;
   left: 15px;
-  content: ' ';
+  content: " ";
   height: 33px;
   width: 2px;
   background-color: var(--dark);
@@ -156,7 +156,9 @@ export default {
 }
 
 @keyframes spin {
-  100% {transform: rotate(1turn); }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 .contactBtn {
@@ -284,16 +286,16 @@ li {
   height: 55px;
   background-color: rgb(255, 255, 255);
 }
-.expand-enter-active{
-	animation: bounce-in 0.5s;
+.expand-enter-active {
+  animation: bounce-in 0.5s;
 }
-.expand-leave-active{
-    animation: bounce-in 0.5s reverse;
+.expand-leave-active {
+  animation: bounce-in 0.5s reverse;
 }
 
 @keyframes bounce-in {
   0% {
-    max-height: 0px; 
+    max-height: 0px;
     opacity: 0.4;
   }
   100% {

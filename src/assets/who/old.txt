@@ -1,0 +1,24 @@
+// .keyboard {
+//     width: 50%;
+//     position: relative;
+//     left: -29%;
+//     z-index: 10;
+//     //top: -10%;
+//     opacity: 0;
+//   }
+//   .development {
+//     text-transform: uppercase;
+//     position: relative;
+//     top: 20%;
+//     left: 50%;
+//     z-index: 5;
+//     opacity: 0;
+//     width: 40vw;
+//     h1 {
+//       text-align: left;
+//       font-size: 5em;
+//     }
+//     p {
+//       text-align: left;
+//     }
+//   }

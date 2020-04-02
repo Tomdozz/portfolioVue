@@ -1,0 +1,64 @@
+.long {
+    display: grid;
+    grid-template-columns: 50% auto;
+  
+    .info {
+      width: 80%;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      position: relative;
+      opacity: 0;
+  
+      h1 {
+        font-size: 7em;
+        text-align: left;
+        text-transform: uppercase;
+      }
+  
+      h2 {
+        font-size: 2em;
+        text-align: left;
+        text-transform: uppercase;
+      }
+      p {
+        text-align: left;
+        //background: white;
+        position: absolute;
+        //padding: 1em;
+      }
+    }
+    .profile {
+        position: relative;
+    
+        display: grid;
+        place-items: center;
+        width: 60%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        opacity: 0;
+      }
+    }
+    .profile.move {
+        animation: profile 1.5s ease-in;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes profile {
+        0% {
+          opacity: 0;
+          transform: translateX(-30%) rotateY(20deg);
+        }
+        100% {
+          opacity: 1;
+          //transform: scale(1) rotate(0deg);
+        }
+      }
+      @keyframes info {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
