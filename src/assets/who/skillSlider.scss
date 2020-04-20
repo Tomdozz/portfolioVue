@@ -1,3 +1,6 @@
+.skill-cap{
+  padding-top: 15px;
+}
 .skill-container {
     width: 100%;
     background-color: var(--darkPaper);
@@ -6,7 +9,7 @@
   
   .skills {
     text-align: right;
-    padding-top: 3px;
+    padding-top: 5px;
     //padding-bottom: 10px;
     color: white;
     height: 5px;
@@ -36,7 +39,7 @@
   .skills.move.html{
     animation: fillBarHtml 1s ease-in;
     animation-fill-mode: forwards;
-    animation-delay: 3.5s;
+    animation-delay: 3s;
   }
 
   @keyframes fillBarHtml {
@@ -53,7 +56,7 @@
   .skills.move.js{
     animation: fillBarJs 1s ease-in;
     animation-fill-mode: forwards;
-    animation-delay: 4.5s;
+    animation-delay: 3.5s;
   }
 
   @keyframes fillBarJs {
@@ -64,6 +67,40 @@
     100% {
       opacity: 1;
       width: 65%;
+    }
+  }
+
+  .skills.move.vue{
+    animation: fillBarVue 1s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+  }
+
+  @keyframes fillBarVue {
+    0% {
+      opacity: 0.80;
+      width: 0%;
+    }
+    100% {
+      opacity: 1;
+      width: 45%;
+    }
+  }
+
+  .skills.move.xd{
+    animation: fillBarXd 1s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+  }
+
+  @keyframes fillBarXd {
+    0% {
+      opacity: 0.80;
+      width: 0%;
+    }
+    100% {
+      opacity: 1;
+      width: 25%;
     }
   }
 

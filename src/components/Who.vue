@@ -25,27 +25,44 @@
           src="../assets/keyboard2.png"
           class="keyboard section1Anim"
         />
-         <div class="development section1Anim">
+        <div class="development">
           <h1>Development</h1>
           <p>
-            B.S in computer sience with specialization in game development. With
-            passion for design and creating an software that improve peoples
-            everyday lives
+            I'm a full stack developer based i Malmö. I got a B.S in computer
+            sience with specialization in game development. My biggest passion
+            is design and creating an software that improve peoples everyday
+            lives.
           </p>
 
-          <p>JAVA</p>
-          <div class="skill-container">
-            <div class="skills section1Anim java"></div>
+          <div class="skill-cap">
+            <p>JAVA</p>
+            <div class="skill-container">
+              <div class="skills section1Anim java"></div>
+            </div>
           </div>
-
-          <p>HTML/CSS</p>
-          <div class="skill-container">
-            <div class="skills section1Anim html"></div>
+          <div class="skill-cap">
+            <p>HTML/CSS</p>
+            <div class="skill-container">
+              <div class="skills section1Anim html"></div>
+            </div>
           </div>
-
-          <p>JavaScript</p>
-          <div class="skill-container">
-            <div class="skills section1Anim js"></div>
+          <div class="skill-cap">
+            <p>JavaScript</p>
+            <div class="skill-container">
+              <div class="skills section1Anim js"></div>
+            </div>
+          </div>
+          <div class="skill-cap">
+            <p>Vue</p>
+            <div class="skill-container">
+              <div class="skills section1Anim vue"></div>
+            </div>
+          </div>
+          <div class="skill-cap">
+            <p>Adobe XD</p>
+            <div class="skill-container">
+              <div class="skills section1Anim xd"></div>
+            </div>
           </div>
         </div>
       </div>

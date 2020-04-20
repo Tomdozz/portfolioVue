@@ -10,11 +10,11 @@
         left: -5%;
    }
    .development {
-       opacity: 0;
+       //opacity: 0;
         text-transform: uppercase;
         position: relative;
-        left: 50%;
-        transform: translate(-50%, 0%);
+        //left: 30%;
+        //transform: translate(-50%, 0%);
         z-index: 5;
         width: 40vw;
         h1 {
@@ -32,10 +32,11 @@
     animation-fill-mode: forwards;
     opacity: 0;
   }
-  .development.move {
-    animation: leftToRightInfo 1.5s ease-in;
+  .devinfo.move {
+    animation: leftToRightDevelopment 1.5s ease-in;
     animation-fill-mode: forwards;
-    opacity: 0;
+    animation-delay: 1s;
+    //opacity: 0;
   }
   
   .info.move {
@@ -52,3 +53,15 @@
       opacity: 1;
     }
   }
+
+  @keyframes leftToRightDevelopment {
+    0% {
+      opacity: 0;
+      transform: translateX(-260%);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
